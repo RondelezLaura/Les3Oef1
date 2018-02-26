@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Les3Oef1.ShoppingList>
+
+@{
+    ViewData["Title"] = "Finish";
+}
+
+<h2>List items</h2
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.DisplayFor(modelItem => item.Naam)
+            (@Html.DisplayFor(modelItem => item.Aantal)x)
+            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ })
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </li>
+    }
+</ul>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
